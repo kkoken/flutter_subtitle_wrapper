@@ -18,6 +18,7 @@ class SubtitleTextView extends StatelessWidget {
     return subtitleStyle.hasBorder
         ? TextStyle(
             fontSize: subtitleStyle.fontSize,
+            fontWeight: subtitleStyle.fontWeight,
             foreground: Paint()
               ..style = subtitleStyle.borderStyle.style
               ..strokeWidth = subtitleStyle.borderStyle.strokeWidth
@@ -26,6 +27,7 @@ class SubtitleTextView extends StatelessWidget {
         : TextStyle(
             fontSize: subtitleStyle.fontSize,
             color: subtitleStyle.textColor,
+            fontWeight: subtitleStyle.fontWeight,
           );
   }
 
@@ -64,6 +66,7 @@ class SubtitleTextView extends StatelessWidget {
                           textStyle: TextStyle(
                             color: subtitleStyle.textColor,
                             fontSize: subtitleStyle.fontSize,
+                            fontWeight: subtitleStyle.fontWeight,
                           ),
                         ),
                       ),
