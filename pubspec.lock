@@ -35,7 +35,7 @@ packages:
       name: args
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.2.0"
   async:
     dependency: transitive
     description:
@@ -98,7 +98,7 @@ packages:
       name: convert
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.1"
   coverage:
     dependency: transitive
     description:
@@ -345,6 +345,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.5.0"
+  process:
+    dependency: transitive
+    description:
+      name: process
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.3"
   provider:
     dependency: transitive
     description:
@@ -500,7 +507,7 @@ packages:
   video_player_platform_interface:
     dependency: transitive
     description:
-      name: video_player_platform_interface
+      name: visibility_detector
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.2"
