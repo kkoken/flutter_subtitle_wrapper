@@ -6,6 +6,7 @@ class SubtitleStyle {
   final bool hasBorder;
   final SubtitleBorderStyle borderStyle;
   final double fontSize;
+  final FontWeight fontWeight;
   final Color textColor;
   final SubtitlePosition position;
 
@@ -13,6 +14,7 @@ class SubtitleStyle {
     this.hasBorder = false,
     this.borderStyle = const SubtitleBorderStyle(),
     this.fontSize = 16,
+    this.fontWeight = FontWeight.normal,
     this.textColor = Colors.black,
     this.position = const SubtitlePosition(),
   });
