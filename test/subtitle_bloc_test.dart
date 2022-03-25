@@ -1,3 +1,4 @@
+import 'package:better_player/better_player.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -5,9 +6,8 @@ import 'package:subtitle_wrapper_package/bloc/subtitle/subtitle_bloc.dart';
 import 'package:subtitle_wrapper_package/data/models/subtitle.dart';
 import 'package:subtitle_wrapper_package/data/repository/subtitle_repository.dart';
 import 'package:subtitle_wrapper_package/subtitle_controller.dart';
-import 'package:video_player/video_player.dart';
 
-class MockVideoPlayerController extends Mock implements VideoPlayerController {}
+class MockVideoPlayerController extends Mock implements BetterPlayerController {}
 
 void main() {
   final _subtitleController = SubtitleController(
@@ -25,7 +25,7 @@ void main() {
           subtitleRepository: SubtitleDataRepository(
             subtitleController: _subtitleController,
           ),
-          videoPlayerController: MockVideoPlayerController(),
+          controller: MockVideoPlayerController(),
         ),
         act: (SubtitleBloc bloc) => bloc.add(
           InitSubtitles(
@@ -44,7 +44,7 @@ void main() {
           subtitleRepository: SubtitleDataRepository(
             subtitleController: _subtitleController,
           ),
-          videoPlayerController: MockVideoPlayerController(),
+          controller: MockVideoPlayerController(),
         ),
         act: (dynamic bloc) => bloc.add(
           UpdateLoadedSubtitle(
@@ -77,10 +77,10 @@ void main() {
           subtitleRepository: SubtitleDataRepository(
             subtitleController: _subtitleController,
           ),
-          videoPlayerController: MockVideoPlayerController(),
+          controller: MockVideoPlayerController(),
         ),
         act: (SubtitleBloc bloc) {
-          bloc.videoPlayerController.notifyListeners();
+          bloc.controller.videoPlayerController?.notifyListeners();
           return bloc.add(
             LoadSubtitle(),
           );
