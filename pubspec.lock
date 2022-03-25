@@ -32,9 +32,11 @@ packages:
   better_player:
     dependency: "direct main"
     description:
-      name: better_player
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: b33873bc7bd3c9be5da3c1e608e07d1f8e38454e
+      url: "https://github.com/kkoken/betterplayer.git"
+    source: git
     version: "0.0.81"
   bloc:
     dependency: "direct main"
@@ -615,7 +617,7 @@ packages:
       name: wakelock
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.6"
+    version: "0.6.1+2"
   wakelock_macos:
     dependency: transitive
     description:

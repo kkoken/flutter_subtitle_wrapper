@@ -11,9 +11,11 @@ packages:
   better_player:
     dependency: transitive
     description:
-      name: better_player
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: b33873bc7bd3c9be5da3c1e608e07d1f8e38454e
+      url: "https://github.com/kkoken/betterplayer.git"
+    source: git
     version: "0.0.81"
   bloc:
     dependency: transitive
@@ -49,7 +51,7 @@ packages:
       name: chewie
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.2"
+    version: "1.3.1"
   clock:
     dependency: transitive
     description:
@@ -117,7 +119,7 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "7.1.0"
+    version: "7.3.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -295,7 +297,7 @@ packages:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.0"
+    version: "6.0.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -364,6 +366,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  very_good_analysis:
+    dependency: transitive
+    description:
+      name: very_good_analysis
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.4.0"
   video_player:
     dependency: "direct main"
     description:
@@ -412,7 +421,7 @@ packages:
       name: wakelock
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.6"
+    version: "0.6.1+2"
   wakelock_macos:
     dependency: transitive
     description:

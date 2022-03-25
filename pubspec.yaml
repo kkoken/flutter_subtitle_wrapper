@@ -7,7 +7,9 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  better_player: ^0.0.81
+  better_player:
+    git:
+      url: https://github.com/kkoken/betterplayer.git
   bloc: ^7.0.0
   equatable: ^2.0.0
   flutter:
