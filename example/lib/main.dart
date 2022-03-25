@@ -84,8 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: SizedBox(
               height: 270,
               child: SubtitleWrapper(
-                videoPlayerController:
-                    localChewieController.videoPlayerController,
+                videoPlayerController: localChewieController.videoPlayerController,
                 subtitleController: subtitleController,
                 subtitleStyle: const SubtitleStyle(
                   textColor: Colors.white,
@@ -152,10 +151,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             children: [
                               ElevatedButton(
                                 style: ButtonStyle(
-                                  elevation:
-                                      MaterialStateProperty.all<double>(8.0),
-                                  shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
+                                  elevation: MaterialStateProperty.all<double>(8.0),
+                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(
                                         8.0,
@@ -164,17 +161,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 onPressed: () => updateSubtitleUrl(
-                                  subtitleLanguage:
-                                      ExampleSubtitleLanguage.english,
+                                  subtitleLanguage: ExampleSubtitleLanguage.english,
                                 ),
                                 child: const Text('Switch to 🇬🇧'),
                               ),
                               ElevatedButton(
                                 style: ButtonStyle(
-                                  elevation:
-                                      MaterialStateProperty.all<double>(8.0),
-                                  shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
+                                  elevation: MaterialStateProperty.all<double>(8.0),
+                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(
                                         8.0,
@@ -183,17 +177,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 onPressed: () => updateSubtitleUrl(
-                                  subtitleLanguage:
-                                      ExampleSubtitleLanguage.spanish,
+                                  subtitleLanguage: ExampleSubtitleLanguage.spanish,
                                 ),
                                 child: const Text('Switch to 🇪🇸'),
                               ),
                               ElevatedButton(
                                 style: ButtonStyle(
-                                  elevation:
-                                      MaterialStateProperty.all<double>(8.0),
-                                  shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
+                                  elevation: MaterialStateProperty.all<double>(8.0),
+                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(
                                         8.0,
@@ -202,8 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 onPressed: () => updateSubtitleUrl(
-                                  subtitleLanguage:
-                                      ExampleSubtitleLanguage.dutch,
+                                  subtitleLanguage: ExampleSubtitleLanguage.dutch,
                                 ),
                                 child: const Text('Switch to 🇳🇱'),
                               ),
