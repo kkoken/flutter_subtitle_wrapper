@@ -12,11 +12,11 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: b33873bc7bd3c9be5da3c1e608e07d1f8e38454e
+      ref: "v0.0.82"
+      resolved-ref: "67b5ff8da3472d40ce797cc8bf5515e1b76d7048"
       url: "https://github.com/kkoken/betterplayer.git"
     source: git
-    version: "0.0.81"
+    version: "0.0.82"
   bloc:
     dependency: transitive
     description:
