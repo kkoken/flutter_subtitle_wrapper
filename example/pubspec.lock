@@ -14,7 +14,7 @@ packages:
       path: "."
       ref: master
       resolved-ref: a6b8fbcfd7c8026e4b69aaf2a3ebd105a4654964
-      url: "https://github.com/kkoken/betterplayer"
+      url: "git@github.com:kkoken/betterplayer.git"
     source: git
     version: "0.0.83"
   bloc:
