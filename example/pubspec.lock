@@ -14,7 +14,7 @@ packages:
       path: "."
       ref: "fix/black-screen"
       resolved-ref: bc3804b8b5cd8a82f49fbe21e7ebb926cb8b04fe
-      url: "https://github.com/kkoken/betterplayer"
+      url: "https://github.com/kkoken/betterplayer.git"
     source: git
     version: "0.0.83"
   bloc:
