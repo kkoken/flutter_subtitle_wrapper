@@ -1,11 +1,11 @@
+import 'package:better_player/better_player.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:subtitle_wrapper_package/bloc/subtitle/subtitle_bloc.dart';
 import 'package:subtitle_wrapper_package/data/repository/subtitle_repository.dart';
 import 'package:subtitle_wrapper_package/subtitle_controller.dart';
-import 'package:video_player/video_player.dart';
 
-class MockVideoPlayerController extends Mock implements VideoPlayerController {}
+class MockVideoPlayerController extends Mock implements BetterPlayerController {}
 
 void main() {
   final _subtitleController = SubtitleController(
@@ -16,17 +16,20 @@ void main() {
   group(
     'Subtitle controller',
     () {
-      test('attach', () async {
-        _subtitleController.attach(
-          SubtitleBloc(
-            subtitleController: _subtitleController,
-            subtitleRepository: SubtitleDataRepository(
+      test(
+        'attach',
+        () async {
+          _subtitleController.attach(
+            SubtitleBloc(
               subtitleController: _subtitleController,
+              subtitleRepository: SubtitleDataRepository(
+                subtitleController: _subtitleController,
+              ),
+              controller: MockVideoPlayerController(),
             ),
-            videoPlayerController: MockVideoPlayerController(),
-          ),
-        );
-      });
+          );
+        },
+      );
       test('detach', () async {
         _subtitleController.detach();
       });
@@ -38,7 +41,7 @@ void main() {
             subtitleRepository: SubtitleDataRepository(
               subtitleController: _subtitleController,
             ),
-            videoPlayerController: MockVideoPlayerController(),
+            controller: MockVideoPlayerController(),
           ),
         );
         _subtitleController.updateSubtitleUrl(
@@ -53,7 +56,7 @@ void main() {
             subtitleRepository: SubtitleDataRepository(
               subtitleController: _subtitleController,
             ),
-            videoPlayerController: MockVideoPlayerController(),
+            controller: MockVideoPlayerController(),
           ),
         );
         _subtitleController.updateSubtitleContent(
