@@ -12,8 +12,8 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: "fix/black-screen"
-      resolved-ref: bc3804b8b5cd8a82f49fbe21e7ebb926cb8b04fe
+      ref: master
+      resolved-ref: a6b8fbcfd7c8026e4b69aaf2a3ebd105a4654964
       url: "https://github.com/kkoken/betterplayer"
     source: git
     version: "0.0.83"
