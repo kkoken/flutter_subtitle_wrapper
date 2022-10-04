@@ -1,6 +1,6 @@
+import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:subtitle_wrapper_package/subtitle_wrapper_package.dart';
-import 'package:video_player/video_player.dart';
 
 // ignore: prefer-match-file-name, this has a different name because of the deprecation.
 class SubTitleWrapper extends SubtitleWrapper {
@@ -9,7 +9,7 @@ class SubTitleWrapper extends SubtitleWrapper {
     Key? key,
     required Widget videoChild,
     required SubtitleController subtitleController,
-    required VideoPlayerController videoPlayerController,
+    required BetterPlayerController videoPlayerController,
     SubtitleStyle subtitleStyle = const SubtitleStyle(),
     Color? backgroundColor,
   }) : super(

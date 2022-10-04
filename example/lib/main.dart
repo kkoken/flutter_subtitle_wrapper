@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: EdgeInsets.only(
               top: MediaQuery.of(context).padding.top,
             ),
-            child: SizedBox(
+            child: /*SizedBox(
               height: 270,
               child: SubtitleWrapper(
                 videoPlayerController: localChewieController.videoPlayerController,
@@ -94,7 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   controller: localChewieController,
                 ),
               ),
-            ),
+            ),*/
+                Container(),
           ),
           Expanded(
             child: Container(
