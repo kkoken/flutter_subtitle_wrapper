@@ -43,27 +43,32 @@ class SubtitleBloc extends Bloc<SubtitleEvent, SubtitleState> {
     required Emitter<SubtitleState> emit,
   }) async {
     emit(LoadingSubtitle());
-    final videoPlayerController = controller.videoPlayerController;
-
-    videoPlayerController?.addListener(
-      () {
-        final videoPlayerPosition = videoPlayerController.value.position;
-        final subtitleItem = subtitles.subtitles.singleWhere(
-          (subtitle) =>
-              videoPlayerPosition.inMilliseconds > subtitle.startTime.inMilliseconds &&
-              videoPlayerPosition.inMilliseconds < subtitle.endTime.inMilliseconds,
-          orElse: () => const Subtitle(startTime: Duration.zero, endTime: Duration.zero, text: ''),
-        );
-
-        add(UpdateLoadedSubtitle(subtitle: subtitleItem));
-      },
-    );
+    controller.videoPlayerController?.addListener(_listener);
   }
 
   @override
   Future<void> close() {
     subtitleController.detach();
+    controller.videoPlayerController?.removeListener(_listener);
 
     return super.close();
+  }
+
+  void _listener() {
+    final videoPlayerController = controller.videoPlayerController;
+
+    final videoPlayerPosition = videoPlayerController?.value.position;
+    final subtitleItem = subtitles.subtitles.singleWhere(
+      (subtitle) =>
+          (videoPlayerPosition?.inMilliseconds ?? 0) > subtitle.startTime.inMilliseconds &&
+          (videoPlayerPosition?.inMilliseconds ?? 0) < subtitle.endTime.inMilliseconds,
+      orElse: () => const Subtitle(
+        endTime: Duration.zero,
+        startTime: Duration.zero,
+        text: '',
+      ),
+    );
+
+    add(UpdateLoadedSubtitle(subtitle: subtitleItem));
   }
 }
