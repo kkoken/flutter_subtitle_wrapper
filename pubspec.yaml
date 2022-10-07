@@ -10,8 +10,8 @@ environment:
 dependencies:
   better_player:
     git:
-      url: https://github.com/kkoken/betterplayer
-      ref: fix/black-screen
+      url: https://github.com/kkoken/betterplayer.git
+      ref: master
   bloc: ^8.0.3
   equatable: ^2.0.3
   flutter:
