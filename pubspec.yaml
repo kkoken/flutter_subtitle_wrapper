@@ -10,8 +10,9 @@ environment:
 dependencies:
   better_player:
     git:
-      url: https://github.com/kkoken/betterplayer.git
+      url: https://github.com/uniqcast/betterplayer.git
       ref: master
+      path: better_player
   bloc: ^8.0.3
   equatable: ^2.0.3
   flutter:
